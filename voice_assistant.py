@@ -133,3 +133,12 @@ def mouse_control(command):
         pyautogui.rightClick()
 
         speak("Right click")
+def scroll_control(command):
+
+    if "scroll up" in command:
+
+        pyautogui.scroll(500)
+
+    elif "scroll down" in command:
+
+        pyautogui.scroll(-500)
