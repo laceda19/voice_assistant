@@ -82,3 +82,12 @@ def open_app(command):
         webbrowser.open("https://google.com")
 
         speak("Opening Google")
+def search_google(command):
+
+    search_term = command.replace("search", "")
+
+    url = f"https://www.google.com/search?q={search_term}"
+
+    webbrowser.open(url)
+
+    speak(f"Searching {search_term}")
