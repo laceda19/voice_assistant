@@ -91,3 +91,10 @@ def search_google(command):
     webbrowser.open(url)
 
     speak(f"Searching {search_term}")
+def type_text(command):
+
+    text = command.replace("type", "")
+
+    pyautogui.write(text, interval=0.05)
+
+    speak("Typing completed")
