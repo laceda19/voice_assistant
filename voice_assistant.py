@@ -168,3 +168,22 @@ def volume_control(command):
     elif "mute" in command:
 
         keyboard.press_and_release("volume mute")
+def window_control(command):
+
+    if "close window" in command:
+
+        pyautogui.hotkey("alt", "f4")
+
+        speak("Closing window")
+
+    elif "minimize" in command:
+
+        pyautogui.hotkey("win", "down")
+
+    elif "copy" in command:
+
+        pyautogui.hotkey("ctrl", "c")
+
+    elif "paste" in command:
+
+        pyautogui.hotkey("ctrl", "v")
