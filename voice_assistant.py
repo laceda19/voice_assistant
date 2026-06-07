@@ -187,3 +187,8 @@ def window_control(command):
     elif "paste" in command:
 
         pyautogui.hotkey("ctrl", "v")
+print("=" * 60)
+print("🤖 VOICE CONTROLLED EVERYTHING")
+print("=" * 60)
+
+speak("Voice assistant started")
