@@ -45,3 +45,40 @@ def listen():
             print("⚠️ ERROR:", e)
 
             return ""
+def open_app(command):
+
+    if "chrome" in command:
+
+        os.system("start chrome")
+
+        speak("Opening Chrome")
+
+    elif "calculator" in command:
+
+        os.system("calc")
+
+        speak("Opening Calculator")
+
+    elif "notepad" in command:
+
+        os.system("notepad")
+
+        speak("Opening Notepad")
+
+    elif "paint" in command:
+
+        os.system("mspaint")
+
+        speak("Opening Paint")
+
+    elif "youtube" in command:
+
+        webbrowser.open("https://youtube.com")
+
+        speak("Opening YouTube")
+
+    elif "google" in command:
+
+        webbrowser.open("https://google.com")
+
+        speak("Opening Google")
