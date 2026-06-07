@@ -236,3 +236,8 @@ while True:
     ):
 
         window_control(command)
+    elif "exit" in command or "quit" in command:
+
+        speak("Goodbye")
+
+        break
