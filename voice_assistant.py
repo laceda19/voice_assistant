@@ -9,3 +9,10 @@ engine = pyttsx3.init()
 recognizer = sr.Recognizer()
 
 pyautogui.FAILSAFE = False
+def speak(text):
+
+    print(f"\n🤖 {text}")
+
+    engine.say(text)
+
+    engine.runAndWait()
