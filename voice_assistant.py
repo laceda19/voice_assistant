@@ -5,3 +5,7 @@ import webbrowser
 import os
 import time
 import keyboard
+engine = pyttsx3.init()
+recognizer = sr.Recognizer()
+
+pyautogui.FAILSAFE = False
