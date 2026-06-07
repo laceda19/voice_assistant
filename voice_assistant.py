@@ -98,3 +98,38 @@ def type_text(command):
     pyautogui.write(text, interval=0.05)
 
     speak("Typing completed")
+def mouse_control(command):
+
+    if "move right" in command:
+
+        pyautogui.moveRel(100, 0)
+
+    elif "move left" in command:
+
+        pyautogui.moveRel(-100, 0)
+
+    elif "move up" in command:
+
+        pyautogui.moveRel(0, -100)
+
+    elif "move down" in command:
+
+        pyautogui.moveRel(0, 100)
+
+    elif "click" in command:
+
+        pyautogui.click()
+
+        speak("Mouse clicked")
+
+    elif "double click" in command:
+
+        pyautogui.doubleClick()
+
+        speak("Double clicked")
+
+    elif "right click" in command:
+
+        pyautogui.rightClick()
+
+        speak("Right click")
