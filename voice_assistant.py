@@ -151,3 +151,20 @@ def take_screenshot():
     screenshot.save(filename)
 
     speak("Screenshot taken")
+def volume_control(command):
+
+    if "volume up" in command:
+
+        for _ in range(5):
+
+            keyboard.press_and_release("volume up")
+
+    elif "volume down" in command:
+
+        for _ in range(5):
+
+            keyboard.press_and_release("volume down")
+
+    elif "mute" in command:
+
+        keyboard.press_and_release("volume mute")
