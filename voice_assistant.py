@@ -192,3 +192,47 @@ print("🤖 VOICE CONTROLLED EVERYTHING")
 print("=" * 60)
 
 speak("Voice assistant started")
+while True:
+
+    command = listen()
+
+    if not command:
+
+        continue
+
+    if "open" in command:
+
+        open_app(command)
+
+    elif "search" in command:
+
+        search_google(command)
+
+    elif "type" in command:
+
+        type_text(command)
+
+    elif "move" in command or "click" in command:
+
+        mouse_control(command)
+
+    elif "scroll" in command:
+
+        scroll_control(command)
+
+    elif "screenshot" in command:
+
+        take_screenshot()
+
+    elif "volume" in command or "mute" in command:
+
+        volume_control(command)
+
+    elif (
+        "close" in command
+        or "copy" in command
+        or "paste" in command
+        or "minimize" in command
+    ):
+
+        window_control(command)
