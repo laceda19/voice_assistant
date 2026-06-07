@@ -142,3 +142,12 @@ def scroll_control(command):
     elif "scroll down" in command:
 
         pyautogui.scroll(-500)
+def take_screenshot():
+
+    filename = f"screenshot_{int(time.time())}.png"
+
+    screenshot = pyautogui.screenshot()
+
+    screenshot.save(filename)
+
+    speak("Screenshot taken")
